@@ -6,7 +6,7 @@ export const StoreContext = createContext(null) //ye context h isse sb suscribe 
 const StoreContextProvider = (props) => { //iski wajah se sbko context mil rha h iske andr sb wrap krdenge
 
     const [cartItems, setCartItems] = useState({});
-    const url = "http://localhost:4000"
+    const url = "https://food-del-backend-yvdk.onrender.com"
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
 
