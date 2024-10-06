@@ -4,7 +4,7 @@ const GForm = () => {
     const googleFormLink = "https://forms.gle/dfoJFGJkQbZDoNV88";
   return (
     <div className="w-full bg-gray-200 p-8 grid grid-cols-6 items-center rounded-md mt-6">
-      <div className="col-span-5">
+      <div className="col-span-5 mb-4 md:mb-0">
         <h2 className="text-3xl font-bold mb-2 text-orange-600">Welcome to QuickBite</h2>
         <p className="mb-1 text-base">
         We’d love to hear your feedback on how we can improve!.Let us know if there are any UI upgrades or 
@@ -20,7 +20,7 @@ const GForm = () => {
       </div>
 
       {/* Right Section with a "Click Here" Button */}
-      <div className="col-span-1 flex justify-end">
+      <div className="col-span-6 md:col-span-1 flex justify-center md:justify-end">
         <a href={googleFormLink} target="_blank" rel="noopener noreferrer">
             <button className="bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
             Click Here
