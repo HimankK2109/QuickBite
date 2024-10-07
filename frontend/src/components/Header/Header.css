@@ -46,21 +46,58 @@
     }
 }
 
-@media (max-width: 768px) {
+/* General tablet adjustments */
+@media (max-width: 1024px) {
     .header {
-        height: 50vw; /* Increase height for better content fitting */
+        height: 40vw; /* Adjust height for larger tablets */
     }
     .header-contents {
-        max-width: 70%; /* Increase the width a bit for better fit */
-        left: 4vw; /* Adjust left positioning to center content better */
+        max-width: 60%; /* Provide more space on larger screens */
+        left: 5vw; /* Adjust left positioning */
     }
     .header-contents h2 {
-        font-size: max(6vw, 22px); /* Adjust font size to be larger on small screens */
+        font-size: max(5vw, 22px); /* Increase size on larger tablets */
     }
     .header-contents button {
-        padding: 2vw 3vw; /* Reduce padding to fit within smaller screens */
+        padding: 1.5vw 2.5vw; /* Adjust button size */
     }
 }
+
+/* iPad Air-specific adjustments (820px - 834px wide) */
+@media (max-width: 834px) and (min-width: 820px) {
+    .header {
+        height: 45vw; /* Adjust height to ensure proper content fitting */
+    }
+    .header-contents {
+        max-width: 55%; /* Give more width for iPad Air */
+        left: 4vw; /* Adjust left margin to ensure better centering */
+    }
+    .header-contents h2 {
+        font-size: max(4vw, 22px); /* Increase font size for iPad Air */
+    }
+    .header-contents button {
+        padding: 1.8vw 3vw; /* Increase button padding for better proportions */
+    }
+}
+
+/* iPad Mini-specific adjustments (768px wide) */
+@media (max-width: 768px) {
+    .header {
+        height: 50vw; /* Adjust height for iPad Mini */
+    }
+    .header-contents {
+        max-width: 65%; /* Make content narrower */
+        left: 4vw; /* Adjust the left position */
+    }
+    .header-contents h2 {
+        font-size: max(6vw, 22px); /* Make font larger on iPad Mini */
+    }
+    .header-contents button {
+        padding: 2vw 3vw; /* Adjust button size */
+    }
+}
+
+
 
 @media (max-width:750px){
     .header-contents{
