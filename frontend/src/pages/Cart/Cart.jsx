@@ -4,8 +4,14 @@ import { StoreContext } from '../../context/StoreContext'
 import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
-  const{ cartItems, food_list, removeFromCart,getTotalCartAmount,url } = useContext(StoreContext)
+  const{ cartItems, food_list, removeFromCart,getTotalCartAmount,url,,token } = useContext(StoreContext)
   const navigate = useNavigate()
+
+  const validateSignIn = (token) => {
+    if(!token){
+      alert("Please SignIn to place your order");
+    }
+  }
 
   return (
     <div className='cart'>
@@ -60,7 +66,7 @@ const Cart = () => {
               <b><strong>&#8377;</strong>{getTotalCartAmount() === 0? 0 : getTotalCartAmount() + 2}</b>
             </div>
           </div>
-           <button onClick={() => navigate('/order')}>Proceed to Checkout</button>
+           <button onClick={() => {navigate('/order'); validateSignIn(token);} }>Proceed to Checkout</button>
         </div>
 
         <div className="cart-promocode">
