@@ -46,6 +46,22 @@
     }
 }
 
+@media (max-width: 768px) {
+    .header {
+        height: 50vw; /* Increase height for better content fitting */
+    }
+    .header-contents {
+        max-width: 70%; /* Increase the width a bit for better fit */
+        left: 4vw; /* Adjust left positioning to center content better */
+    }
+    .header-contents h2 {
+        font-size: max(6vw, 22px); /* Adjust font size to be larger on small screens */
+    }
+    .header-contents button {
+        padding: 2vw 3vw; /* Reduce padding to fit within smaller screens */
+    }
+}
+
 @media (max-width:750px){
     .header-contents{
         max-width: 65%;
